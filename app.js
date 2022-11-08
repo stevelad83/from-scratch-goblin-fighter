@@ -50,6 +50,29 @@ formEl.addEventListener('submit', (e) => {
     displayPests();
 });
 
+function pestClickHandler(pestData) {
+    if (pestData.hp <= 0) return;
+    if (Math.random() < 0.33) {
+        pestData--;
+        alert('You hit ' + pestData.name);
+    } else {
+        alert('You tried to hit ' + pestData.name + ' but missed');
+    }
+    if (Math.random() < 0.5) {
+        exterminatorHP--;
+        alert(pestData.name + ' hit you!');
+    } else {
+        alert(pestData.name + ' tried to hit you but missed!');
+    }
+
+    if (pestData.hp === 0) {
+        killCount++;
+    }
+    if (exterminatorHP === 0) {
+        exterminatorImgEl.classList.add('game-over');
+        alert('YOU LOSE!');
+    }
+}
 /* Display Functions */
 
 function displayPests() {
