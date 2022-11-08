@@ -1,20 +1,28 @@
+main {
+    background-image: url(../assets/rubbish.png);
+    background-repeat: no-repeat;
+}
+
 .exterminator-section {
     width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-image: url(../assets/rubbish.png);
 }
 
 .pest-section {
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
 .pests {
+    flex-direction: row;
+}
+
+.row {
     flex-direction: row;
 }
