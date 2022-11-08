@@ -1,3 +1,46 @@
+![](./assets/wireframe.png)
+
+##Elements
+-hero section
+-goblin section
+-input for adding new goblins with button click - form
+-span for tracking dead goblins
+-span for tracking hero's health
+-goblin list (create div elements)
+
+##State
+-array of goblins (object with id, name, hp)
+-number of goblins killed
+-hero hp
+-current ID (to make new goblins with ids)
+
+##Events
+-Goblin onclick
+possibly -- goblin hp
+possibly -- hero's hp
+possibly ++ dead goblins
+update DOM with new HPs and dead goblins state
+
+-new goblin form (on submit)
+-user supplied name & submit form
+-make new goblin object
+-add new object to goblins array
+-update list display - clear out list DOM
+-loop through array
+-render new element for each goblin
+-append each el to the container el
+
+##functions
+displayGoblins - clear list and render element for each item
+renderGoblin(goblin) - create goblin element for specific goblin object
+goblinClickHandler - game logic on goblin click
+
+##Features
+
+1. Rendering goblin list to page
+2. form to create goblins (render to page)
+3. gamification
+
 ## The Golden Rule:
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
