@@ -31,7 +31,10 @@ header .logo {
 }
 
 main {
+    gap: 20px;
     padding: 20px;
     display: flex;
-    flex-direction: rox;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
 }
