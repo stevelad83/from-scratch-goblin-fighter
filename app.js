@@ -52,7 +52,7 @@ formEl.addEventListener('submit', (e) => {
 
 function pestClickHandler(pestData) {
     if (pestData.hp <= 0) return;
-    if (Math.random() < 0.33) {
+    if (Math.random() < 0.5) {
         pestData--;
         alert('You hit ' + pestData.name);
     } else {
@@ -72,6 +72,9 @@ function pestClickHandler(pestData) {
         exterminatorImgEl.classList.add('game-over');
         alert('YOU LOSE!');
     }
+
+    exterminatorHPEl.textContent = exterminatorHP;
+    killedPestsEl.textContent = killCount;
 }
 /* Display Functions */
 
