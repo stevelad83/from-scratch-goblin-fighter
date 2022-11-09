@@ -36,6 +36,8 @@ let killCount = 0;
 
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    if (exterminatorHP <= 0) return;
     const data = new FormData(formEl);
 
     const pestName = data.get('pest-name');
@@ -51,8 +53,8 @@ formEl.addEventListener('submit', (e) => {
 });
 
 function pestClickHandler(pestData) {
-    console.log(pestData);
     if (pestData.hp <= 0) return;
+    if (exterminatorHP <= 0) return;
     if (Math.random() < 0.5) {
         pestData.hp--;
         alert('You hit ' + pestData.name);
@@ -77,6 +79,7 @@ function pestClickHandler(pestData) {
     exterminatorHPEl.textContent = exterminatorHP;
     killedPestsEl.textContent = killCount;
 
+    displayPests();
     renderPest(pestData);
 }
 /* Display Functions */
