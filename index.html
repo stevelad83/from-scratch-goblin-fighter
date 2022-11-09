@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Pest Smasher 5000</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/style.css" type="text/css" />
+        <link rel="stylesheet" href="styles/reset.css" type="text/css" />
+        <link rel="stylesheet" href="styles/global.css" type="text/css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Pest Smasher 5000</h1>
+        </header>
 
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <section class="exterminator-section">
+                <div class="exterminator-stats">
+                    <p>You have killed <span id="kill-count">0</span> pests</p>
+                    <div class="killed-list"></div>
+                </div>
+                <div class="exterminator">
+                    <p>
+                        Your HP:
+                        <span id="exterminator-hp">10</span>
+                    </p>
+                    <img
+                        id="exterminator-img"
+                        width="200px;"
+                        src="./assets/exterminator.png"
+                        alt="picture of a
+                    pest controller in hazmat gear"
+                    />
+                </div>
+            </section>
+            <section class="pest-section">
+                <form>
+                    <label for="pest-name">Name your pest!</label>
+                    <input name="pest-name" id="pest-name" type="text" />
+                    <button type="submit">Create pest!</button>
+                </form>
+                <div class="pests">
+                    <div class="row">
+                        <p>Cricket</p>
+                        <p id="pest-hp-1">1</p>
+                    </div>
+                    <p id="pest-1">🦗</p>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
